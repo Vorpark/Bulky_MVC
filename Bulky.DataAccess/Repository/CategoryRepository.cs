@@ -15,9 +15,5 @@ namespace Bulky.DataAccess.Repository
         {
             _db.Categories.Update(obj);
         }
-        public void Save()
-        {
-            _db.SaveChanges();
-        }
     }
 }
