@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bulky.Models
 {
@@ -11,6 +12,7 @@ namespace Bulky.Models
         [Display(Name = "Титульник")]
         public string Title { get; set; }
 
+        [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Описание")]
         public string Description { get; set; }
 
@@ -40,5 +42,12 @@ namespace Bulky.Models
         [Display(Name = "Цена за покупку 100+ штук")]
         [Range(0, 10000)]
         public double Price100 { get; set; }
+
+        [Display(Name = "Категория")]
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }
