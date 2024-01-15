@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Bulky.Models
 {
@@ -25,29 +26,32 @@ namespace Bulky.Models
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Прейскурант")]
-        [Range(0, 10000)]
+        [Range(1, 10000, ErrorMessage = "Допустимый диапазон от 1 до 10000")]
         public double ListPrice { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Цена за покупку 1-50 штук")]
-        [Range(0, 10000)]
+        [Range(1, 10000, ErrorMessage = "Допустимый диапазон от 1 до 10000")]
         public double Price { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Цена за покупку 50-100 штук")]
-        [Range(0, 10000)]
+        [Range(1, 10000, ErrorMessage = "Допустимый диапазон от 1 до 10000")]
         public double Price50 { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Цена за покупку 100+ штук")]
-        [Range(0, 10000)]
+        [Range(1, 10000, ErrorMessage = "Допустимый диапазон от 1 до 10000")]
         public double Price100 { get; set; }
 
+        [Required(ErrorMessage = "Нужно выбрать категорию")]
         [Display(Name = "Категория")]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         public Category Category { get; set; }
 
+        [Required(ErrorMessage = "Поле не может быть пустым")]
         public string ImageUrl { get; set; }
     }
 }
