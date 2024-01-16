@@ -52,6 +52,7 @@ namespace Bulky.Models
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
         [Display(Name = "Изображение")]
+        [ValidateNever]
         public string ImageUrl { get; set; }
     }
 }
