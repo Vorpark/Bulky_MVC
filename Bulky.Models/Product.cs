@@ -51,6 +51,7 @@ namespace Bulky.Models
         public Category Category { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым")]
+        [Display(Name = "Изображение")]
         public string ImageUrl { get; set; }
     }
 }
