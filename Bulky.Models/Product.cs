@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Bulky.Models
 {
