@@ -5,6 +5,7 @@ using Bulky.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BulkyWeb.Areas.Admin.Controllers
 {
@@ -78,6 +79,10 @@ namespace BulkyWeb.Areas.Admin.Controllers
                     }
 
                     productVM.Product.ImageUrl = @"\images\product\" + fileName;
+                }
+                else
+                {
+                    productVM.Product.ImageUrl = String.Empty;
                 }
 
                 if (productVM.Product.Id == 0)
