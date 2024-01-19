@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Bulky.DataAccess.Repository
 {
-    public class Repository<T> : IRepository<T> 
+    public class Repository<T> : IRepository<T>
         where T : class
     {
         private readonly ApplicationDbContext _db;
@@ -41,7 +41,7 @@ namespace Bulky.DataAccess.Repository
             if (!string.IsNullOrEmpty(includeProperties))
             {
                 foreach (var includeProp in includeProperties
-                    .Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProp);
                 }

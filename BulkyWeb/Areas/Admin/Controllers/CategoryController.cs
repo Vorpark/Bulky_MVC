@@ -1,8 +1,8 @@
-﻿using Bulky.Models;
-using Microsoft.AspNetCore.Mvc;
-using Bulky.DataAccess.Repository.IRepository;
-using Microsoft.AspNetCore.Authorization;
+﻿using Bulky.DataAccess.Repository.IRepository;
+using Bulky.Models;
 using Bulky.Utility;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Areas.Admin.Controllers
 {

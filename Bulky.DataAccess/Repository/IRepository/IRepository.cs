@@ -2,7 +2,7 @@
 
 namespace Bulky.DataAccess.Repository.IRepository
 {
-    public interface IRepository<T> 
+    public interface IRepository<T>
         where T : class
     {
         //T - Category

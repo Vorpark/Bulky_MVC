@@ -16,7 +16,7 @@ namespace BulkyWebRazor_Temp.Pages.Categories
         }
         public void OnGet(int? id)
         {
-            if (id != null && id != 0) 
+            if (id != null && id != 0)
             {
                 Category = _db.Categories.Find(id);
             }
